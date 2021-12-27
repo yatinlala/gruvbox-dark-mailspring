@@ -12,6 +12,7 @@ When modifying, open developer console and use these commands to test changes:
 # File tree
 
 
+```
 .
 ├── styles                 # All stylesheets
 |   ├── email-frame.less   # Inverts email frame colors properly.
