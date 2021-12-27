@@ -1,8 +1,4 @@
-/*
-Include the standard variables from Mailspring's base theme:
-https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-variables.less
-*/
-@import "base/ui-variables";
+@import 'base/ui-variables';
 
 @gray-base: #ffffff;
 @gray-darker: darken(@gray-base, 13.5%);
@@ -12,26 +8,26 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 @gray-lighter: darken(@gray-base, 92.5%);
 @white: #0a0a0a;
 
-@accent-primary: #58b660;
+@accent-primary: #689d6a;
 @accent-primary-dark: darken(@accent-primary, 10%);
 
-@background-primary: #212121;
-@background-off-primary: #212121;
-@background-secondary: #121212;
-@background-tertiary: #6d7987;
+@background-primary: #3c3836;
+@background-off-primary: #3c3836;
+@background-secondary: #282828;
+@background-tertiary: #1d2021;
 
 @border-color-primary: lighten(@background-primary, 10%);
 @border-color-secondary: lighten(@background-secondary, 10%);
 @border-color-tertiary: lighten(@background-tertiary, 10%);
 @border-color-divider: @border-color-secondary;
 
-@text-color: #eee;
+@text-color: #ebdbb2;
 @text-color-subtle: fadeout(@text-color, 20%);
 @text-color-very-subtle: fadeout(@text-color, 40%);
-@text-color-inverse: white;
+@text-color-inverse: #ebdbb2;
 @text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
 @text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
-@text-color-heading: #fff;
+@text-color-heading: #ebdbb2;
 
 @text-color-link: @accent-primary;
 @text-color-link-hover: @accent-primary-dark;
@@ -48,5 +44,32 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 @list-selected-color: @text-color-inverse;
 @list-focused-color: @text-color;
 
-@toolbar-background-color: #121212;
-@panel-background-color: #121212;
+@toolbar-background-color: #3c3836;
+@panel-background-color: #3c3836;
+
+.sheet-toolbar {
+  border-bottom: 1px solid @border-color-divider;
+  box-shadow: none;
+}
+
+.thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
+  -webkit-filter: invert(100%);
+}
+img.content-dark {
+  -webkit-filter: invert(100%);
+}
+img.content-light {
+  -webkit-filter: invert(100%);
+}
+
+.mail-label {
+  -webkit-filter: contrast(110%) brightness(85%);
+}
+
+#message-list .message-item-wrap .message-item-white-wrap {
+  box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28), 0 1px 1.5px rgba(255, 255, 255, 0.08);
+}
+
+.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
+  color: #aaa;
+}
